@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl"><head><meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کافه صبحانه بهروز | منو</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&amp;family=Lalezar&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF1DF;
+    --ink:#241A11;
+    --ink-soft: rgba(36,26,17,0.62);
+    --saffron:#C4842A;
+    --saffron-deep:#8F5D1B;
+    --line: rgba(36,26,17,0.13);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Vazirmatn', sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+
+  .wrap{max-width:820px; margin:0 auto; padding:0 24px;}
+
+  .tile-divider{
+    height:20px;
+    width:100%;
+    background-image: radial-gradient(circle at 11px 11px, var(--saffron) 0 3.5px, transparent 4px);
+    background-size:22px 22px;
+    background-position:center;
+    opacity:0.4;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    background:var(--ink);
+    color:var(--cream);
+    padding:76px 0 62px;
+    text-align:center;
+  }
+
+  .samovar{ width:60px; height:60px; margin:0 auto 22px; opacity:0.9; }
+
+  .eyebrow{
+    font-size:15px;
+    letter-spacing:0.16em;
+    color:var(--saffron);
+    font-weight:700;
+    margin-bottom:16px;
+  }
+
+  .hero h1{
+    font-family:'Lalezar', 'Vazirmatn', sans-serif;
+    font-weight:400;
+    font-size:clamp(64px, 13vw, 108px);
+    color:#fff;
+    line-height:1.05;
+    margin-bottom:16px;
+  }
+
+  .hero .sub{
+    font-size:clamp(17px, 2.6vw, 20px);
+    font-weight:400;
+    color:rgba(251,241,223,0.82);
+    max-width:480px;
+    margin:0 auto 36px;
+  }
+
+  .hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 28px;
+    border-radius:10px;
+    font-weight:700;
+    font-size:16px;
+    text-decoration:none;
+    border:1.5px solid transparent;
+    transition: transform 0.18s ease, opacity 0.18s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn:focus-visible{ outline:3px solid #fff; outline-offset:3px; }
+
+  .btn-insta{
+    background:var(--saffron);
+    color:var(--ink);
+  }
+  .btn-insta:hover{ opacity:0.92; }
+  .btn-insta svg{ width:19px; height:19px; }
+
+  .btn-phone{
+    background:transparent;
+    border-color:rgba(251,241,223,0.5);
+    color:#fff;
+  }
+  .btn-phone:hover{ background:rgba(251,241,223,0.1); }
+  .btn-phone svg{ width:18px; height:18px; }
+
+  /* ---------- NAV ---------- */
+  .quicknav{
+    display:flex;
+    gap:8px;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:20px 24px;
+    background:var(--cream);
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+  .quicknav a{
+    font-size:15px;
+    font-weight:600;
+    color:var(--ink-soft);
+    text-decoration:none;
+    padding:8px 18px;
+    border-radius:8px;
+    transition: color 0.15s ease, background 0.15s ease;
+  }
+  .quicknav a:hover{ color:var(--ink); background:var(--line); }
+  .quicknav a:focus-visible{ outline:2px solid var(--saffron); outline-offset:2px; }
+
+  /* ---------- SECTIONS ---------- */
+  section.menu{ padding:68px 0 16px; }
+
+  .section-head{ margin-bottom:38px; }
+  .section-head .kicker{
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:0.06em;
+    color:var(--saffron-deep);
+    margin-bottom:8px;
+  }
+  .section-head h2{
+    font-family:'Lalezar', sans-serif;
+    font-weight:400;
+    font-size:clamp(36px, 6vw, 48px);
+    color:var(--ink);
+  }
+  .section-head p{
+    max-width:460px;
+    font-size:15.5px;
+    color:var(--ink-soft);
+    margin-top:8px;
+  }
+
+  .subgroup-label{
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:0.04em;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    margin:38px 0 4px;
+  }
+  .subgroup-label:first-of-type{ margin-top:0; }
+
+  .item{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:20px;
+    padding:20px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .item:last-child{ border-bottom:none; }
+
+  .item-main{ min-width:0; }
+  .item-title{
+    font-weight:700;
+    font-size:19px;
+    color:var(--ink);
+  }
+  .item-desc{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    margin-top:4px;
+  }
+
+  .item-price{
+    flex:0 0 auto;
+    font-weight:700;
+    font-size:17px;
+    color:var(--saffron-deep);
+    white-space:nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .item-price sup{
+    font-size:11px;
+    font-weight:600;
+    margin-inline-start:2px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--ink);
+    color:var(--cream);
+    text-align:center;
+    padding:64px 24px 46px;
+    margin-top:50px;
+  }
+  footer h3{
+    font-family:'Lalezar', sans-serif;
+    font-weight:400;
+    font-size:34px;
+    margin-bottom:12px;
+    color:#fff;
+  }
+  footer p{
+    color:rgba(251,241,223,0.72);
+    font-size:15px;
+    margin-bottom:30px;
+  }
+  .footer-actions{
+    display:flex;
+    gap:14px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .footer-actions .btn-phone{ border-color:rgba(251,241,223,0.4); }
+
+  .footnote{
+    margin-top:34px;
+    font-size:13px;
+    color:rgba(251,241,223,0.4);
+  }
+
+  @media (max-width:480px){
+    .hero{ padding:56px 0 46px; }
+    section.menu{ padding:50px 0 8px; }
+    .item{ flex-direction:column; align-items:flex-start; gap:6px; }
+  }
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <svg class="samovar" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M32 4c-2 0-3.5 1.6-3.5 3.5 0 1.2.6 2.2 1.5 2.9V13h4V10.4c.9-.7 1.5-1.7 1.5-2.9C35.5 5.6 34 4 32 4z" fill="#C4842A" class=""></path>
+        <rect x="22" y="14" width="20" height="6" rx="2" fill="#C4842A" class=""></rect>
+        <path d="M18 22c0-1.1.9-2 2-2h24c1.1 0 2 .9 2 2v18c0 6.6-5.4 12-12 12h-4c-6.6 0-12-5.4-12-12V22z" fill="#C4842A" class=""></path>
+        <rect x="13" y="30" width="6" height="4" rx="1.5" fill="#C4842A"></rect>
+        <rect x="45" y="30" width="6" height="4" rx="1.5" fill="#C4842A" class=""></rect>
+        <rect x="26" y="36" width="12" height="8" rx="2" fill="#241A11" class=""></rect>
+        <circle cx="32" cy="40" r="1.6" fill="#C4842A"></circle>
+        <path d="M20 54h24v3a2 2 0 0 1-2 2H22a2 2 0 0 1-2-2v-3z" fill="#C4842A" class=""></path>
+      </svg>
+
+      <div class="eyebrow" style="text-align: center;">کافه صبحانه</div>
+      <h1 class="">بهروز</h1>
+      <p class="sub" style="text-align: center;">صبحانه‌ی سنتی، قهوه‌ی تازه و نوشیدنی‌های گرم و سرد؛ هر روز از صبح تا پاسی از شب</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-insta" href="https://www.instagram.com/behrouzbreakfastcafe?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="6" stroke="#241A11" stroke-width="1.8"></rect>
+            <circle cx="12" cy="12" r="4.3" stroke="#241A11" stroke-width="1.8"></circle>
+            <circle cx="17.4" cy="6.6" r="1.2" fill="#241A11"></circle>
+          </svg>
+          صفحه ما در اینستاگرام
+        </a>
+        <a class="btn btn-phone" href="tel:09334780136">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1.1L6.6 10.8z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"></path>
+          </svg>
+          ۰۹۳۳۴۷۸۰۱۳۶
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="quicknav" aria-label="پیمایش سریع منو">
+    <a href="#sobhane" class="">صبحانه</a>
+    <a href="#garm">نوشیدنی گرم</a>
+    <a href="#sard">نوشیدنی سرد</a>
+    <a href="#cafe">منوی کافه</a>
+  </nav>
+
+  <main class="wrap">
+
+    <!-- BREAKFAST -->
+    <section class="menu" id="sobhane">
+      <div class="section-head">
+        <div class="kicker">هر روز، از ساعت 7 صبح</div>
+        <h2 class="">منوی صبحانه کافه</h2>
+      </div>
+
+      <div class="item">
+        <div class="item-main">
+          <div class="item-title">🍅 املت با پوره گوجه، پیشنهادی بهروز</div>
+          <div class="item-desc">املت مخصوص بهروز با پوره گوجه‌فرنگی خوش‌عطر و طعم خانگی؛ ساده، خوشمزه و متفاوت.</div>
+        </div>
+        <div class="item-price">170 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main">
+          <div class="item-title">🍅 املت با پوره گوجه، پیشنهادی بهروز</div>
+          <div class="item-desc">املت داغ و خوش‌طعم با قارچ تازه و پنیر کش‌دار؛ انتخابی دلچسب برای یک صبحانه کامل و سیرکننده.</div>
+        </div>
+        <div class="item-price">235&nbsp;<sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main">
+          <div class="item-title">🥘 املت بازاری (ربّی)</div>
+          <div class="item-desc">املت سنتی و پرطرفدار با رب گوجه‌فرنگی و ادویه‌های مخصوص؛ همان طعم نوستالژیک املت‌های بازاری.</div>
+        </div>
+        <div class="item-price">130&nbsp;<sup class="">ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main">
+          <div class="item-title">🌭 سوسیس و تخم‌مرغ</div>
+          <div class="item-desc">ترکیب محبوب سوسیس و تخم‌مرغ، داغ و تازه؛ مناسب برای یک صبحانه خوشمزه و مقوی.</div>
+        </div>
+        <div class="item-price">190&nbsp;<sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main">
+          <div class="item-title">🍳 املت سوسیس و تخم‌مرغ</div>
+          <div class="item-desc">ترکیب سوسیس، تخم‌مرغ و چاشنی مخصوص و رب گوجه؛ یک انتخاب خوش‌خوراک برای شروع روز.</div>
+        </div>
+        <div class="item-price">195 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main">
+          <div class="item-title">🌶️ تخم‌مرغ پیازی سبک لری </div>
+          <div class="item-desc">تخم‌مرغ پیازی لری؛ پیاز کاراملی  سنتی و خوش‌طعم.</div>
+        </div>
+        <div class="item-price">110&nbsp;<sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main">
+          <div class="item-title">🍳 تخم‌مرغ ساده</div>
+          <div class="item-desc">انتخاب بین نیمرو یا تخم‌مرغ هم‌زده؛ ساده و دوست‌داشتنی، درست همان‌طور که می‌پسندید.</div>
+        </div>
+        <div class="item-price">100&nbsp;<sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main">
+          <div class="item-title">🥚 تخم‌مرغ آب‌پز رژیمی</div>
+          <div class="item-desc">تخم‌مرغ آب‌پز ساده و سبک؛ مناسب برای یک صبحانه کم‌چرب و رژیمی.</div>
+        </div>
+        <div class="item-price">90&nbsp;<sup>ت</sup></div>
+      </div>
+    </section>
+
+    <div class="tile-divider"></div>
+
+    <!-- HOT DRINKS -->
+    <section class="menu" id="garm">
+      <div class="section-head">
+        <div class="kicker">دم‌کرده و تازه</div>
+        <h2>نوشیدنی‌های گرم</h2>
+      </div>
+
+      <div class="subgroup-label">چای و دمنوش</div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">اسپرسو تک</div><div class="item-desc"></div></div>
+        <div class="item-price">60 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">چای ماسالا</div><div class="item-desc">چای هندی با ادویه و شیر</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">دمنوش گل گاوزبان</div><div class="item-desc">آرام‌بخش و معطر</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+
+      <div class="subgroup-label">قهوه</div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">اسپرسو</div><div class="item-desc">تک یا دوبل</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">آمریکانو</div><div class="item-desc">اسپرسو با آب داغ</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">کاپوچینو</div><div class="item-desc">اسپرسو، شیر و فوم نرم</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">لاته</div><div class="item-desc">اسپرسو با شیر بخارداده</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">موکا</div><div class="item-desc">اسپرسو، شکلات و شیر</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">هات چاکلت</div><div class="item-desc">شکلات داغ خامه‌ای</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+    </section>
+
+    <!-- COLD DRINKS -->
+    <section class="menu" id="sard">
+      <div class="section-head">
+        <div class="kicker">خنک و طراوت‌بخش</div>
+        <h2>نوشیدنی‌های سرد</h2>
+      </div>
+
+      <div class="item">
+        <div class="item-main"><div class="item-title">آیس لاته</div><div class="item-desc">اسپرسو، شیر و یخ</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">آیس آمریکانو</div><div class="item-desc">اسپرسو، آب سرد و یخ</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">اسموتی میوه‌ای</div><div class="item-desc">میوه‌ی فصل، ماست و عسل</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">آب‌میوه‌ی طبیعی</div><div class="item-desc">پرتقال، هویج یا انار تازه</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">میلک‌شیک</div><div class="item-desc">وانیل، شکلات یا موز</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">لیموناد نعنا</div><div class="item-desc">لیموی تازه، نعنا و سودا</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+    </section>
+
+    <div class="tile-divider"></div>
+
+    <!-- CAFE MENU -->
+    <section class="menu" id="cafe">
+      <div class="section-head">
+        <div class="kicker">کنار نوشیدنی</div>
+        <h2>منوی کافه</h2>
+        <p>کیک، شیرینی و میان‌وعده‌های تازه برای کنار قهوه یا چای</p>
+      </div>
+
+      <div class="item">
+        <div class="item-main"><div class="item-title">کیک ردولوت</div><div class="item-desc">نرم و خامه‌ای</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">چیزکیک</div><div class="item-desc">با سس توت فرنگی</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">براونی</div><div class="item-desc">شکلاتی و گرم، با بستنی وانیل</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">کوکی شکلاتی</div><div class="item-desc">تازه و ترد</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">ساندویچ صبحانه</div><div class="item-desc">تخم‌مرغ، پنیر و سبزیجات در نان تست</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+      <div class="item">
+        <div class="item-main"><div class="item-title">کروسان</div><div class="item-desc">ساده یا با پنیر و ژامبون</div></div>
+        <div class="item-price">___،000 <sup>ت</sup></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="">
+    <h3>منتظرتان هستیم</h3>
+    <p>برای دیدن عکس‌ها و آخرین خبرها، صفحه‌ی اینستاگرام ما را دنبال کنید یا تماس بگیرید.</p>
+    <div class="footer-actions">
+      <a class="btn btn-insta" href="https://www.instagram.com/behrouzbreakfastcafe?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="6" stroke="#241A11" stroke-width="1.8"></rect>
+          <circle cx="12" cy="12" r="4.3" stroke="#241A11" stroke-width="1.8"></circle>
+          <circle cx="17.4" cy="6.6" r="1.2" fill="#241A11"></circle>
+        </svg>
+        behrouzbreakfastcafe@
+      </a>
+      <a class="btn btn-phone" href="tel:09334780136">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1.1L6.6 10.8z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"></path>
+        </svg>
+        ۰۹۳۳۴۷۸۰۱۳۶
+      </a>
+    </div>
+    <div class="footnote"><b class="">کافه صبحانه بهروز</b></div>
+    <div class="footnote">طراحی منو: فرهاد تاج بخش 09109856171</div>
+
+  </footer>
+
+
+
+</body></html>

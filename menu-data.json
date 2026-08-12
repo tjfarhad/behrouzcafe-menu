@@ -90,12 +90,7 @@
         {
           "label": null,
           "items": [
-            { "title": "کیک ردولوت", "desc": "نرم و خامه‌ای", "price": null },
-            { "title": "چیزکیک", "desc": "با سس توت فرنگی", "price": null },
-            { "title": "براونی", "desc": "شکلاتی و گرم، با بستنی وانیل", "price": null },
-            { "title": "کوکی شکلاتی", "desc": "تازه و ترد", "price": null },
-            { "title": "ساندویچ صبحانه", "desc": "تخم‌مرغ، پنیر و سبزیجات در نان تست", "price": null },
-            { "title": "کروسان", "desc": "ساده یا با پنیر و ژامبون", "price": null }
+            { "title": "انواع کیک و بیسکوئیت موجود هست", "desc": null, "price": null },
           ]
         }
       ]

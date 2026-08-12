@@ -1,6 +1,6 @@
 {
   "cafeName": "بهروز",
-  "tagline": "اولین صبحانه خوری شهر مصیری",
+  "tagline": "(اولین صبحانه خوری شهر مصیری)",
   "instagramUrl": "https://www.instagram.com/behrouzbreakfastcafe?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   "phone": "09334780136",
   "phoneDisplay": "۰۹۳۳۴۷۸۰۱۳۶",
@@ -90,12 +90,9 @@
         {
           "label": null,
           "items": [
-            { "title": "کیک ردولوت", "desc": "نرم و خامه‌ای", "price": null },
-            { "title": "چیزکیک", "desc": "با سس توت فرنگی", "price": null },
-            { "title": "براونی", "desc": "شکلاتی و گرم، با بستنی وانیل", "price": null },
-            { "title": "کوکی شکلاتی", "desc": "تازه و ترد", "price": null },
-            { "title": "ساندویچ صبحانه", "desc": "تخم‌مرغ، پنیر و سبزیجات در نان تست", "price": null },
-            { "title": "کروسان", "desc": "ساده یا با پنیر و ژامبون", "price": null }
+            { "title": "انواع کیک", "desc": null , "price": null },
+            { "title": "انواع بیسکوئیت", "desc": null , "price": null },
+            { "title": "کروسان", "desc": null , "price": null },
           ]
         }
       ]

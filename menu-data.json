@@ -1,6 +1,6 @@
 {
   "cafeName": "بهروز",
-  "tagline": "اولین صبحانه خوری شهر مصیری",
+  "tagline": "صبحانه‌ی سنتی، قهوه‌ی تازه و نوشیدنی‌های خنک؛ هر روز از صبح تا ظهر",
   "instagramUrl": "https://www.instagram.com/behrouzbreakfastcafe?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   "phone": "09334780136",
   "phoneDisplay": "۰۹۳۳۴۷۸۰۱۳۶",
@@ -8,7 +8,7 @@
     {
       "id": "sobhane",
       "navLabel": "صبحانه",
-      "kicker": "هر روز، از ساعت 7 صبح",
+      "kicker": "هر روز، از ساعت ۸ صبح",
       "title": "منوی صبحانه",
       "subtitle": "تمامی منو همراه دو عدد تخم مرغ و مخلفات می‌باشد",
       "groups": [
@@ -42,7 +42,7 @@
             { "title": "چای ساده", "desc": null, "price": 30 },
             { "title": "چای نبات", "desc": null, "price": 40 },
             { "title": "چای ماسالا", "desc": "چای هندی با ادویه و شیر", "price": 80 },
-            { "title": "انواع دمنوش", "desc": "آرام‌بخش و معطر", "price": 60 }
+            { "title": "دمنوش گل گاوزبان", "desc": "آرام‌بخش و معطر", "price": 60 }
           ]
         },
         {
@@ -72,6 +72,7 @@
         {
           "label": null,
           "items": [
+            { "title": "آیس کافی", "desc": null, "price": 90 },
             { "title": "🍒 یخ در بهشت آلبالو", "desc": "خنک، ترش و شیرین؛ انتخابی عالی برای یک نوشیدنی تابستانی و دلچسب.", "price": 60 },
             { "title": "🍮 آیس کارامل", "desc": "نوشیدنی سرد و خوش‌عطر با طعم کارامل؛ مناسب برای طرفداران نوشیدنی‌های شیرین و خنک.", "price": 150 },
             { "title": "آیس لاته", "desc": "اسپرسو، شیر و یخ", "price": 150 },
@@ -90,9 +91,12 @@
         {
           "label": null,
           "items": [
-            { "title": "انواع کیک و بیسکوئیت موجود هست", "desc": null, "price": null },
-            { "title": "انواع کیک و بیسکوئیت موجود هست", "desc": null, "price": null },
-            { "title": "انواع کیک و بیسکوئیت موجود هست", "desc": null, "price": null },
+            { "title": "کیک ردولوت", "desc": "نرم و خامه‌ای", "price": null },
+            { "title": "چیزکیک", "desc": "با سس توت فرنگی", "price": null },
+            { "title": "براونی", "desc": "شکلاتی و گرم، با بستنی وانیل", "price": null },
+            { "title": "کوکی شکلاتی", "desc": "تازه و ترد", "price": null },
+            { "title": "ساندویچ صبحانه", "desc": "تخم‌مرغ، پنیر و سبزیجات در نان تست", "price": null },
+            { "title": "کروسان", "desc": "ساده یا با پنیر و ژامبون", "price": null }
           ]
         }
       ]
